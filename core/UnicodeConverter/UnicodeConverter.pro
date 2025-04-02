@@ -16,8 +16,7 @@ DEFINES += UNICODECONVERTER_USE_DYNAMIC_LIBRARY
 
 core_linux {    
     QMAKE_LFLAGS += "-Wl,-rpath,\'\$$ORIGIN\'"
-    # CryptPad: --disable-new-dtags does not exist in emscripten linker
-    # QMAKE_LFLAGS += -Wl,--disable-new-dtags
+    QMAKE_LFLAGS += -Wl,--disable-new-dtags
 }
 
 core_ios {

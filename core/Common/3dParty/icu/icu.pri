@@ -13,9 +13,8 @@ core_windows {
 core_linux {
     INCLUDEPATH += $$PWD/$$CORE_BUILDS_PLATFORM_PREFIX/build/include
 
-# CryptPad: Remove icu from dependencies, emscripten has a buildin libicu
-#    LIBS        += $$PWD/$$CORE_BUILDS_PLATFORM_PREFIX/build/libicuuc.so.$$ICU_MAJOR_VER
-#    LIBS        += $$PWD/$$CORE_BUILDS_PLATFORM_PREFIX/build/libicudata.so.$$ICU_MAJOR_VER
+    LIBS        += -L/usr/local/lib -licuuc
+    LIBS        += -L/usr/local/lib -licudata
 }
 
 core_mac {
